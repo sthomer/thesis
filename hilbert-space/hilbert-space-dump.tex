@@ -1,0 +1,131 @@
+\documentclass{MastersDoctoralThesis}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+
+\title{\textbf{Hilbert Spaces as Generalized Conceptual Spaces} \\
+in Information Dynamics of Thinking Theory}
+\author{Steve Homer}
+
+\def\innerproduct{\langle\cdot _, \cdot\rangle}
+\def\orthseq{\{ \varphi_n \}_{n=0}^\infty}
+
+\begin{document}
+\maketitle
+
+\section{Conceptual Spaces}
+Conceptual spaces are a useful representation framework for applying geometrical intuitions like distance, betweeness, and convexity to any realm that could be composed of quality dimensions.  The canonical example is the conceptual space of color, where any specific color can be thought of as a point in 3D space with quality dimensions hue, chromaticity, and brightness.  This construction makes statements like "Orange is between red and yellow" and "Blue and yellow are far apart" have real geometrical analogs in the conceptual space of color.  Gardenfors initially formulates conceptual spaces in the intuitive Euclidian space with the matching distance and betweeness measures to demonstrate their usefulness in thinking about properties (a convex region within a conceptual space) and concepts (a superposition of properties from multiple conceptual spaces). 
+
+\section{IDyOT Spaces}
+In the Information Dynamics of Thinking, conceptual spaces are geometrical representations of oscillations.  That is, any point in a given $\delta$-dimension represents an oscillation in another dimension. This is motivated by the oscillatory nature of the human brain, where the electric fluctuations of neuronal activity have distinct wave patterns. By taking a segment of that space, one can define a trajectory through any number of points in that segment.  The points in the superior abstraction layer then can be viewed as the spectral representation of trajectories in the inferior abstraction layer.  We will see later how this can be done using the Fourier Transform.
+
+\section{Hilbert Spaces}
+
+\begin{quote}
+  "Hilbert spaces are the means by which the ordinary experience of Euclidian concepts can be extended meaningfully into the idealized constructions of more complex math."
+\end{quote}
+
+Since we need to represent oscillations in a conceptual space, we need a more general notion of what a space is than a finite-dimensional Euclidian space.  The generalization employed here is that of Hilbert spaces, most famously used in quantum mechanics to model wave functions.
+
+Hilbert spaces are characterized by their inner product $\innerproduct$, which can be used to generate an infinite orthonormal sequence $\orthseq$.  Similar to dimensions $(\hat{x}, \hat{y}, \hat{z})$ that characterize three dimensions in Cartesian space, each element in the orthonormal sequence is normalized and orthogonal to each other element, and therefore can be thought of as a dimension. 
+
+Since any function in a Hilbert space can be represented by its Fourier series over an orthonormal sequence, not only can we represent any function, but by employing a different inner product, we generate a different orthonormal sequence and therefore a different representation of that same function. This allows us to have different perspectives of the same "raw" data.  This is analogous to how the coordinates $(1,1)$ representing $(x,y)$ in a 2-dimensional Cartesian space have a different meaning than the coordinates $(1,1)$ representing $(r, \theta)$ in a 2-dimensional radial space.
+
+\subsection{Complete Inner Product Space}
+\begin{itemize}
+  \item \textbf{Vector Space:} Dimensions and rules for combining vectors
+  \item \textbf{Norm $\|.\|$:} Measure of the size of a vector
+  \item \textbf{Inner Product $\innerproduct$:} Defines orthogonality, projections, and angles of vectors
+  \item \textbf{Completeness:} Space is big enough to include norm of converging sequences
+\end{itemize}
+
+The induced norm $||.||$ is defined in terms of the inner product $\innerproduct$:
+\begin{equation}
+  \|f\| = \langle f, f \rangle^{1/2} 
+\end{equation}
+but only if the Cauchy-Schwarz (triangle) inequality holds:
+\begin{equation}
+|\langle f, g \rangle| \leq \|f\|\|g\| 
+\end{equation}
+
+\subsection{Gram-Schmidt Orthogonalization}
+Given an inner product $\innerproduct$ for Hilbert space $\mathcal{H}$, one can generate a complete orthonormal sequence by performing the following procedure:
+
+Find $\{ \varphi_n \}_{n=0}^{N-1} \in \mathcal{H}$ given $\{ f_n \}_{n=0}^{N-1} \in \mathcal{H}$ independent vectors
+\begin{equation}
+\begin{gathered}
+  \varphi_0 \overset{\bigtriangleup}{=} \frac{f_0}{\| f_0 \|} , \quad
+  \nu_n \overset{\bigtriangleup}{=} f_n - \sum_{m=0}^{n-1} \langle f_n , \varphi_m \rangle , \quad
+  \varphi_n \overset{\bigtriangleup}{=} \frac{\nu_n}{\| \nu_n \|}
+\end{gathered}
+\end{equation}
+
+Essentially, at each step n, remove all lower $\varphi_n$ projections from the current function $f$ and normalize it.  By removing all projections on lower $\varphi_n$ at each step, we ensure that what results is orthogonal to everything below it. 
+
+\section{Representing Oscillations}
+
+Functions can be thought of as point or vector in a given Hilbert Space characterized by its inner product $\innerproduct$. Since an oscillation is just a periodic function, we can represent any oscillation to full precision as a point in a Hilbert space.  Specifically, any given function $f$ can be decomposed into its Fourier series:
+
+\begin{equation}
+  f = \sum_{n=0}^\infty \langle f, \varphi_n \rangle \varphi_n
+\end{equation}
+
+Since each $\varphi_n$ represents an orthonormal basis vector, this decomposition allows us to represent any oscillation by an infinite vector, where each dimension of the vector corresponds to a $\varphi_n$.
+
+During abstraction, a trajectory through a segment of points in a given $\delta$-dimension is defined, and its spectral representation as an oscillation is found by performing an m-dimensional Fourier transform on it.
+
+\begin{equation}
+  \label{Multidimensional Fourier Transform}
+  \hat{f}(\bm{\xi}) = \int_{\mathbb{R}_m} f(\bm{x}) e^{-2 \pi i \bm{x} \cdot \bm{\xi}} d\bm{x}
+\end{equation}
+where the integral over $\mathbb{R}_m$ is taken as the m-fold multiple integral on $(-\infty, \infty)$ for each dimension m in the vector.
+
+A trajectory $\tau$ through a set of $N$ oscillations $f_n$ over a period $P$ is defined by setting two of the points at both ends of the period, the rest in the interior of the period, and interpolating between neighboring points for each slot $p \in P$. The result is a vector of $|P|$ oscillations over the period $P$.  
+
+\begin{equation}
+\begin{gathered}
+  \bm{f_n} = [ \langle f_n, \varphi_0 \rangle \quad \langle f_n, \varphi_1 \rangle \quad \langle f_n, \varphi_2 \rangle \quad \cdots ]^\top , \\
+  \bm{\tau} = [ \bm{f_0} \quad \bm{f_1} \quad \cdots \quad \bm{f_{P-1}} ]
+\end{gathered}
+\end{equation}
+
+Since we have $P$ discrete function vectors, we instead use the discrete Fourier transform.
+
+\begin{equation}
+  \hat{f}(\bm{\xi}) = \sum_{\mathbb{R}_m} f(\bm{x}) e^{-2 \pi i \bm{x} \cdot \bm{\xi}} d\bm{x}
+\end{equation}
+where the sum over $\mathbb{R}_m$ is taken as the m-fold multiple summation on $(-\infty, \infty)$ for each dimension m in the vector.
+
+Since our vector of functions is over a period $P$, we can limit the range of the summation to $P$.
+
+\begin{equation}
+\begin{gathered}
+  \hat{\tau}(\bm{k}) = \sum_{n_0 = 0}^{P-1} \overset{M}{...} \sum_{n_m = 0}^{P-1} \bm{\tau_{nm}} e^{-2 \pi i \bm{n} \cdot \bm{k} / P}  \\
+  \text{where } \bm{\tau_{nm}} = \langle f_n, \varphi_m \rangle, \bm{n} = \{n_0, ..., n_m\}, \bm{k} = \{k_0, ..., k_m\}
+\end{gathered}
+\end{equation}
+The notation $\sum \overset{M}{...} \sum$ is the same m-fold summation $\sum_{\mathbb{R}_m}$ as before, except this notation allows us to see the range of each summation as well as the index.
+The notation $\bm{\tau_{nm}}$ refers to the vector created by composing each $\langle f_n, \varphi_m \rangle$ from the matrix $\tau$ according to the summation indices $n_0, ..., n_m$. That is, $n_i = j \implies \langle f_j, \varphi_i \rangle$ for $i = 0, ..., M-1$ and $j = 0, ..., P-1$. 
+
+Since in the m-fold summation, each sum ranges over its index for each single index in the sum just outside of it, the full m-fold summation has the effect of taking every possible combination of elements from each of P points over M dimensions.  In Hilbert space, the number of dimensions is infinite, meaning that $M = \infty$; however, since the orthonormal sequence representing f converges weakly to 0, and the laws of physics don't allow us to have infinite memory, the infinite dimensions representing an oscillation are reasonably truncated at M dimensions.
+
+\section{OLD: Implementation Specification}
+
+$V_i^{\alpha , \delta} = \langle S^{\alpha, \delta}, \langle \cdot , \cdot \rangle_i \rangle$
+
+$V_i^{\alpha , \delta}$: Representation of applying inner product i to vector set S
+
+$S_i^{\alpha , \delta}$: Set of vectors in this dimension at this level of abstraction
+
+$f \in S$: Function vector representing the spectrum of one segment.
+The spectrum of one segment refers to the fourier transform of a trajectory in the inferior abstraction layer.
+
+Fourier Tranform: $f(\xi) = \int_{-\infty}^\infty f(x) e^{-2 \pi i x \xi} dx$
+
+where $f(x)$ is the trajectory function of the inferior segment.
+
+$\langle \cdot , \cdot \rangle_i$: inner product i to apply to set of vectors
+
+
+
+\end{document}
