@@ -109,6 +109,21 @@ The notation $\bm{\tau_{nm}}$ refers to the vector created by composing each $\l
 
 Since in the m-fold summation, each sum ranges over its index for each single index in the sum just outside of it, the full m-fold summation has the effect of taking every possible combination of elements from each of P points over M dimensions.  In Hilbert space, the number of dimensions is infinite, meaning that $M = \infty$; however, since the orthonormal sequence representing f converges weakly to 0, and the laws of physics don't allow us to have infinite memory, the infinite dimensions representing an oscillation are reasonably truncated at M dimensions.
 
+Written in vector form:
+\begin{equation}
+  \tau_{\bm{k}} = \sum_{\bm{n}=0}^{P-1} \tau_{\bm{n}} e^{-2 \pi i \bm{k} \cdot \bm{n} / P}
+\end{equation}
+Or expanding out to full view makes it easy to see how a Fourier transform for each dimension can be taken:
+\begin{equation}
+  \tau_{k_0, ..., k_m} = 
+    \sum_{n_0=0}^{P-1} e^{-2 \pi i k_0 n_0 / P} 
+    \sum_{n_1=0}^{P-1} e^{-2 \pi i k_1 n_1 / P} 
+    ...
+    \sum_{n_m=0}^{P-1} e^{-2 \pi i k_m n_m / P} \cdot \tau_{n_0, ..., n_m} 
+\end{equation}
+TODO: Multidimensional Fast Fourier Transform using Row-Column Method...
+
+
 \section{OLD: Implementation Specification}
 
 $V_i^{\alpha , \delta} = \langle S^{\alpha, \delta}, \langle \cdot , \cdot \rangle_i \rangle$
