@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {1}Conceptual Spaces}{2}% 
+\contentsline {section}{\numberline {1.1}Quality Dimensions:}{2}% 
+\contentsline {section}{\numberline {1.2}Integral and Separable Dimensions:}{2}% 
+\contentsline {section}{\numberline {1.3}Domains and Conceptual Spaces:}{3}% 
+\contentsline {section}{\numberline {1.4}Similarity, Distance, Betweenness:}{3}% 
+\contentsline {section}{\numberline {1.5}Convexity of Properties and Concepts:}{3}% 
+\contentsline {section}{\numberline {1.6}Higher-order conceptual spaces}{3}% 
+\contentsline {chapter}{\numberline {2}Hilbert Spaces}{5}% 
+\contentsline {section}{\numberline {2.1}Motivation}{5}% 
+\contentsline {section}{\numberline {2.2}Complete Inner Product Space}{6}% 
+\contentsline {section}{\numberline {2.3}Gram-Schmidt Orthogonalization}{6}% 
+\contentsline {section}{\numberline {2.4}Representing Oscillations}{6}% 
+\contentsline {chapter}{\numberline {3}Information Theory}{8}% 
+\contentsline {section}{\numberline {3.1}Motivation}{8}% 
+\contentsline {section}{\numberline {3.2}Entropy}{8}% 
+\contentsline {section}{\numberline {3.3}Information Content}{8}% 
+\contentsline {section}{\numberline {3.4}N-Gram Models}{8}% 
+\contentsline {chapter}{\numberline {4}Segmentation}{9}% 
+\contentsline {section}{\numberline {4.1}Difference Function}{9}% 
+\contentsline {section}{\numberline {4.2}Problems with Sparsity}{10}% 
+\contentsline {subsection}{\numberline {4.2.1}Symbol Sparsity}{10}% 
+\contentsline {subsection}{\numberline {4.2.2}Content Sparsity}{10}% 
+\contentsline {section}{\numberline {4.3}Symbol Generation}{11}% 
+\contentsline {chapter}{\numberline {5}Interpolation}{12}% 
+\contentsline {section}{\numberline {5.1}Symbol Sparsity}{12}% 
+\contentsline {section}{\numberline {5.2}Spatial Geometry}{13}% 
+\contentsline {section}{\numberline {5.3}Types}{13}% 
+\contentsline {subsection}{\numberline {5.3.1}Connect the Dots}{13}% 
+\contentsline {subsection}{\numberline {5.3.2}Gaussian Regression (Kriging)}{14}% 
+\contentsline {chapter}{\numberline {6}Abstraction}{15}% 
+\contentsline {section}{\numberline {6.1}Fourier Transform}{15}% 
+\contentsline {section}{\numberline {6.2}Tensor Rank Promotion}{16}% 
+\contentsline {section}{\numberline {6.3}Component-wise Fourier Transform}{16}% 

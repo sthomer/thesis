@@ -1,0 +1,46 @@
+\documentclass[11pt,oneside,a5paper]{book}
+\usepackage{natbib}
+\usepackage{breakcites}
+\usepackage{microtype}
+\usepackage[vcentering,dvips]{geometry}
+\geometry{papersize={7in,9in},bottom=3pc,top=5pc,left=5pc,right=5pc,bmargin=4.5pc,footskip=18pt,headsep=25pt}
+\pdfobjcompresslevel=0
+
+\usepackage[tocindentauto]{tocstyle}
+\usetocstyle{standard}
+\setcounter{tocdepth}{1}
+\usepackage[nottoc]{tocbibind}
+\setcounter{secnumdepth}{3}
+
+\pagestyle{headings}
+\setlength{\parskip}{0.25 \baselineskip}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+
+\title{\textbf{Hilbert Spaces as Generalized Conceptual Spaces} \\
+in Information Dynamics of Thinking Theory}
+\author{Steve Homer}
+\date{}
+
+\def\innerproduct{\langle\cdot _, \cdot\rangle}
+\def\orthseq{\{ \varphi_n \}_{n=0}^\infty}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\include{tex/conceptual-spaces}
+\include{tex/hilbert-spaces}
+\include{tex/information-theory}
+\include{tex/inductive-constraints}
+\include{tex/idyot}
+\include{tex/categorization}
+\include{tex/segmentation}
+\include{tex/interpolation}
+\include{tex/abstraction}
+\include{tex/tensors}
+\include{tex/inner-products}
+
+\end{document}

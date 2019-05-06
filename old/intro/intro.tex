@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+
+\title{\textbf{Hilbert Spaces as Generalized Conceptual Spaces} \\
+in Information Dynamics of Thinking Theory}
+\author{Steve Homer}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+High-level overview
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Representation}
+Connectionist, Conceptual, Symbolic
+
+\subsection{Conceptual Spaces}
+\textbf{BAEF:} Conceptual Spaces allow for intuitive geometric reasoning about related concepts. For instance, in the conceptual space of color with dimensions of hue, saturation, and brightness, one can reasonably make a geometric claim that “orange lies between yellow and red.”
+
+\subsubsection{Basics}
+
+\textbf{Quality Dimensions:}
+Quality dimensions are the basic building blocks of a conceptual space in that they are the axes that give elements in the space meaning.  In three-dimensional Cartesian space, we refer to the xyz-axes when talking about points in the space.  By analogy, each of the xyz-axes would be a quality dimension in the 3D Cartesian space.  However, quality dimensions are more than just orthogonal unit vectors, they can also have their own specific geometry that serves to constrain the dimension. For instance, a quality dimension may have the geometry of a circle, resulting in much different behavior than the real number line.  Finally, quality dimensions allow us to talk meaningfully about similarity between objects and concepts in a space since quality dimensions contain the ideas of distance and betweenness.
+
+\textbf{Integral and Separable Dimensions:}
+Integral quality dimensions are ones that require one another to exist.  For instance, the hue and brightness of a color are dependent on one another. This is more than just correlation, when specifying the value of the hue, the brightness must necessarily also be specified.  Separable dimensions are ones that are independent of one another, like weight and color.  However, just because they are independent, does not mean they can't be correlated.
+
+\textbf{Domains and Conceptual Spaces:}
+A domain is a set of integral dimensions that are separable from all other dimensions.  In a sense, it is the minimum description needed for a given space.  Often, different domains will be correlated to one another, and combining them together yields a full-fledged conceptual space.
+
+\textbf{Similarity, Distance, Betweenness:}
+Humans have an innate sense of similarity without being able to fully describe why two things are similar.  It seems obvious that a rectangle is more similar to a square than a circle, but we're able to intuitively spy similarity in very abstract realms.  For instance, most people would naturally agree that country music is closer to rock than it is to classical, but would be hard-pressed to give an exact definition or method of why this is so.
+
+Conceptual spaces allow this innate sense of similarity to be codified in the intuition of geometry, betweenness, and distance.  Given a betweenness relation for a conceptual space, one can say that a given object is between two other objects, which allows us to say that one is closer to another than the third.  In our case, we will study conceptual spaces equipped with a distance measure.  This allows us to examine the distance between ideas, saying that one is closer to another.  Proximity here serves as our measure of similarity.
+
+\textbf{Convexity of Properties and Concepts:}
+Gardenfors says that a property or concept is a convex region in a given conceptual space.
+
+\subsubsection{Higher-order conceptual spaces}
+Generated from the combination of lower-order QDs according to a pattern
+i.e. A transform from lower to higher abstraction
+
+Higher-order conceptual spaces are simply combinations and transformations of lower-order conceptual spaces.  This often comes with a dimensionality reduction, thought not necessarily; however, the higher-order nature of the spaces always means that it is more abstract than the spaces it is generated from.
+
+This is to distinguish it from combinations that serve to more tightly specify a space.  For instance, given the color space over the space of human phenotypes, overlaying the two results in a restricted color space of human skin tones, not a more abstract space.  (Is this actually NOT higher-order?)  
+
+\subsection{Hilbert Spaces}
+Basics
+Applications
+Gist of application to Conceptual Spaces
+
+\subsection{Inductive Constraints}
+Types of Inductive Constraints (Kemp)
+Example of Color Spaces (RGB vs YUV vs etc.)
+Relation to inner product
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cognitive Architectures and Models}
+small survey here?
+
+\subsection{Global Workspace Theory}
+Overview of Baars' theory
+
+\subsection{Hierarchical Bayesian Models}
+Chater, Tenenbaum, etc.
+Form-Structure Discovery
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Oscillations}
+Results from neuroscience about oscillatory nature of the brain
+Frequency representation of time-varying signals
+
+\subsection{Speech Analysis Techniques}
+MMCP, PPM*, etc.
+
+\subsection{Fourier Transforms}
+Fourier Transform
+Discrete Fourier Transform
+Multidimensional Fourier Transform
+Fast Fourier Transform
+Multidimensional Fast Fourier Transform
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Information Dynamics of Thinking}
+Basics
+Consolidation as Re-Representation
+
+\subsection{Information Theory}
+Shannon information theory basics
+markov models
+n-gram models (bigram models)
+
+\subsection{Abstraction during Segmentation}
+Sproat chinese paper
+
+\textbf{BAEF:} Segmentation of information streams based on boundary entropy is a method inspired by results from statistical linguistics.  To use the example of human speech, in conversation, a listener is constantly predicting what the speaker is about to say.  At the beginning of a sentence they may have no idea what will come next, but near the end of a sentence, he or she might even be able to finish it for the speaker.  This phenomenon can be modeled using the information theory of Shannon, alongside Markov models use extensively in machine learning algorithms.  This allows us to segment any stream of information into chunks based on the information entropy function of that stream.
+
+\subsection{Abstraction during Categorization}
+categorization schemes e.g. prototypes with nearest neighbor, CRP/IBP
+Hyperellipsoid here?
+
+\textbf{BAEF:} In humans, memory consolidation is something thought to happen during sleep or even when daydreaming. The idea is that unnecessary or irrelevant strands of information are pruned away, whereas content-rich and insightful information is integrated with other memories. In Information Dynamics of Thinking theory, this is viewed as a reduction in the entropy of information representation. Specifically, it involves categorizing and conglomerating similar concepts in a given conceptual space. For a pedagogically simple example, given a conceptual space of animals, separate concepts such as a sparrow, an eagle, and a crane might be categorized into single concept of bird, or of flying, or of feathered, etc. This more abstract representation carries more information than any single concept beneath it. 
+
+\end{document}
