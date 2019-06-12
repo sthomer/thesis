@@ -1,0 +1,20 @@
+\section{Categorization}
+
+\subsection{Information Content Reduction Criterion} 
+Since the goal of an IDyOT is to be as information-efficient as possible in its representation of concepts, the primary way to do this is categorize two different symbols together if they lead to an overall reduction in information content of the space.
+
+However, if this reduction by information content measure was the only method used to determine categories, there would be nothing to stop all symbols from being categorized together.  If all the symbols are the same the information content is maximally reduced, but the result is a meaningless stream of monotony.  Obviously, this is unrealistic and undesirable.
+
+\subsection{Categorical Convexity Criterion}
+To push back against the reduction by information content is the categorical convexity criterion.  In section (?) we saw that categories in conceptual spaces are convex regions of the space, which translates to an infininite-dimensional hyperellipsoid in the corresponding Hilbert space.  What the convexity criterion guarantees is that for any two symbols in a given category, there is no symbol from a different category between those two symbols.
+
+\subsection{Betweenness Relation}
+Though this criterion is simple in formulation, the definition of what "between" actually means can vary greatly depending on the space in question.  Even when the space is unidimensional, the definition of between is somewhat arbitrary.  For instance, take the space that is wrapped aorund a circle.  Any point is between any other two points, depending on which direction around the circle you move.  Things get even less clear when moving into higher dimensions, where oftentimes, only a partial ordering is possible.
+
+Therefore, instead of looking at betweenness at all, we instead incrementally build up categories by way of an inclusion radius around each point.  If another point falls within the inclusion radius, those poiints are categorized together.  In this way, we can ensure that ther eis never an interloper in a category, since if it was intruding on the region of the category, it would already be a member.
+
+\subsection{Other Categorization Schemes} 
+Chinese Restaurant Process is a nonparametric bayesian method that allows for unbounded clustering of new points in a space. Since for any given space, the number of "natural" categories is unknown, or perhaps unbounded, it makes sense to use a process that has the ability to add more categories as more data is seen in a given space, in the same way that humans are able to see more nuance the more trained they are in a given subject.
+
+Locality-Sensitive Hashing allows for only a portion of the space to be searched for candidate categories.  Since points are only categorized together when they are close to eachother, there is no need to examine distant points as candidates.  Locality-sensitive hashing allows us to quickly determine what symbols are similar to a target symbol, and check if they should be categorized together.  This is the same as how humans are able to immediately sense similarity, though may require closer inspection to see if two subjects are actually of the same kind.
+

@@ -1,0 +1,33 @@
+\section{Information Theory}
+\label{section:information-theory}
+
+Shannon's information theory \cite{shannon1948mathematical}, though originally aimed at providing a theoretical foundation to signal processing and communication, has become foundational in all aspects regarding information.  According to information theory, the amount of information in a signal can be thought of as the amount of surprise at seeing a given quantity in that signal.  Put more simply, suppose you come in late to work one morning, and upon arriving into the office, your boss tells you about the weather. No information was gleaned from the conversation, since you already knew the weather from being outside.  If instead, upon entering the office late, your boss fires you, you would be very surprised, learning something unexpected, and gaining a lot of information.
+
+\subsection{Entropy}
+\label{subsection:entropy}
+
+Though a concept originally borrowed from statistical physics that represents the amount of disorder in a system \cite{boltzmann1970weitere}, entropy can be applied to any probability distribution.  If applied to a discrete signal of symbols, it can be used to represent the amount of information of the signal (equation \ref{equation:entropy}), by taking it over the probabilities of each symbol $s$ of the alphabet $A$.
+
+\begin{equation}
+  \label{equation:entropy}
+  H(s) = - \sum_{s \in A} p(s) \log_2 p(s)
+\end{equation}
+
+\subsection{Information Content}
+\label{subsection:information-content}
+
+Though entropy is useful in describing the quantity of information of a whole signal, to find the information content $h(s)$ of a single symbol $s$ in an alphabet, one must use equation \ref{equation:information-content} below. Since some symbols are less likely to occur than others, observing them gives more information than more likely ones, which is reflected here.
+
+\begin{equation}
+  \label{equation:information-content}
+  h(s) = - \log_2 p(s)
+\end{equation}
+
+Whereas information content looks at a symbol in isolation, conditional entropy looks at symbols in pairs.  Conditional entropy is equivalent to the information content of a symbol, given that another symbol is known.  If we are referring to a stream of symbols, the conditional entropy would be the information content of a symbol given that we just saw the previous symbol.
+
+\begin{equation}
+  \label{equation:conditional-entropy}
+  H(s|t) = -\log_2 p(s|t)
+\end{equation}
+
+

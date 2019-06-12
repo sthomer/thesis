@@ -1,0 +1,252 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bernkopf%
+}{%
+Bernkopf%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+bernkopf2008schmidt}
+\APACinsertmetastar {%
+bernkopf2008schmidt}%
+\begin{APACrefauthors}%
+Bernkopf, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+\APACrefbtitle {Schmidt, Erhardt.} {Schmidt, erhardt.}
+\newblock
+\begin{APACrefURL}
+  [{2019-07-12}]\url{https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/schmidt-erhard}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Boltzmann%
+}{%
+Boltzmann%
+}{%
+{\protect \APACyear {1970}}%
+}]{%
+boltzmann1970weitere}
+\APACinsertmetastar {%
+boltzmann1970weitere}%
+\begin{APACrefauthors}%
+Boltzmann, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1970}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Weitere studien {\"u}ber das w{\"a}rmegleichgewicht
+  unter gasmolek{\"u}len} {Weitere studien {\"u}ber das w{\"a}rmegleichgewicht
+  unter gasmolek{\"u}len}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Kinetische Theorie II} {Kinetische theorie ii}\ (\BPGS\
+  115--225).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+G{\"a}rdenfors%
+}{%
+G{\"a}rdenfors%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+gardenfors2004conceptual}
+\APACinsertmetastar {%
+gardenfors2004conceptual}%
+\begin{APACrefauthors}%
+G{\"a}rdenfors, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2004}.
+\newblock
+\APACrefbtitle {Conceptual spaces: The geometry of thought} {Conceptual spaces:
+  The geometry of thought}.
+\newblock
+\APACaddressPublisher{}{MIT press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kennedy%
+\ \BBA {} Sadeghi%
+}{%
+Kennedy%
+\ \BBA {} Sadeghi%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+kennedy2013hilbert}
+\APACinsertmetastar {%
+kennedy2013hilbert}%
+\begin{APACrefauthors}%
+Kennedy, R\BPBI A.%
+\BCBT {}\ \BBA {} Sadeghi, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Hilbert space methods in signal processing} {Hilbert space
+  methods in signal processing}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirsh%
+}{%
+Kirsh%
+}{%
+{\protect \APACyear {1991}}%
+}]{%
+kirsh1991today}
+\APACinsertmetastar {%
+kirsh1991today}%
+\begin{APACrefauthors}%
+Kirsh, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1991}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Today the earwig, tomorrow man?} {Today the earwig,
+  tomorrow man?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Artificial intelligence}{47}{1-3}{161--184}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shannon%
+}{%
+Shannon%
+}{%
+{\protect \APACyear {1948}}%
+}]{%
+shannon1948mathematical}
+\APACinsertmetastar {%
+shannon1948mathematical}%
+\begin{APACrefauthors}%
+Shannon, C\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1948}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A mathematical theory of communication} {A mathematical
+  theory of communication}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bell system technical journal}{27}{3}{379--423}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sproat%
+, Gale%
+, Shih%
+\BCBL {}\ \BBA {} Chang%
+}{%
+Sproat%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1996}}%
+}]{%
+sproat1996stochastic}
+\APACinsertmetastar {%
+sproat1996stochastic}%
+\begin{APACrefauthors}%
+Sproat, R.%
+, Gale, W.%
+, Shih, C.%
+\BCBL {}\ \BBA {} Chang, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A stochastic finite-state word-segmentation algorithm
+  for Chinese} {A stochastic finite-state word-segmentation algorithm for
+  chinese}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computational linguistics}{22}{3}{377--404}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Turing%
+}{%
+Turing%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+turing2009computing}
+\APACinsertmetastar {%
+turing2009computing}%
+\begin{APACrefauthors}%
+Turing, A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Computing machinery and intelligence} {Computing
+  machinery and intelligence}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Parsing the Turing Test} {Parsing the turing test}\
+  (\BPGS\ 23--65).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+von Neumann%
+}{%
+von Neumann%
+}{%
+{\protect \APACyear {1955}}%
+}]{%
+neumann1955mathematical}
+\APACinsertmetastar {%
+neumann1955mathematical}%
+\begin{APACrefauthors}%
+von Neumann, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1955}.
+\newblock
+\APACrefbtitle {Mathematical foundations of quantum mechanics} {Mathematical
+  foundations of quantum mechanics}.
+\newblock
+\APACaddressPublisher{}{Princeton university press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wiggins%
+}{%
+Wiggins%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+wiggins2018creativity}
+\APACinsertmetastar {%
+wiggins2018creativity}%
+\begin{APACrefauthors}%
+Wiggins, G\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Creativity, information, and consciousness: the
+  information dynamics of thinking} {Creativity, information, and
+  consciousness: the information dynamics of thinking}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physics of life reviews}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

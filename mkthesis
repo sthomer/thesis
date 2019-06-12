@@ -1,3 +1,0 @@
-latex thesis.tex
-dvipdf thesis.dvi
-evince thesis.pdf &

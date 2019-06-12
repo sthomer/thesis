@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{book}
+
+\usepackage{apacite}
+\usepackage{quotchap}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+\usepackage{pseudocode}
+\usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{url}
+\usepackage{framed}
+\usepackage[framed]{ntheorem}
+\usepackage{verbatim}
+\usepackage{stmaryrd}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{vub}
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{uarial}
+\usepackage{tocloft}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\definecolor{java}{RGB}{127,0,85}
+\newcommand{\code}[1]{\texttt{#1}}
+\lstset{language=Java, basicstyle=\scriptsize,breaklines=true, keywordstyle=\color{java},tabsize=1, frame=single}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\addtocontents{toc}{\cftpagenumbersoff{chapter}}
+\newtheorem{hyp}{Hypothesis} 
+\newframedtheorem{defshad}{Definition}
+\newtheorem{defPim}{Definition}
+\newframedtheorem{pilePrinc}{Principle}
+\newframedtheorem{theo}{}
+\newtheorem{req}{Requirement}
+\setlength{\marginparwidth}{0pt}
+\makeatletter
+\renewcommand*{\sectfont}{\bfseries}
+\renewcommand*{\chapnumfont}{%
+  \usefont{T1}{\@defaultcnfont}{b}{n}\fontsize{120}{150}\selectfont% Default: 100/130
+  \color{chaptergrey}%
+}
+\makeatother
+\geometry{textwidth=390pt}
+
+\geometry{bindingoffset=2cm}
+
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+}
+
+\makeatletter
+\renewcommand\paragraph{%
+   \@startsection{paragraph}{4}{0mm}%
+      {-\baselineskip}%
+      {.5\baselineskip}%
+      {\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+\author{Steven Homer}
+\title{Learning Hierarchical Spectral \\
+Representations of Human Speech \\
+in the Information Dynamics of Thinking}
+\promotortitle{Promoter}
+\promotor{Prof. Dr. Dr. Geraint Wiggins}
+\advisortitle{Advisor}                                                            
+\advisors{Prof. Dr. Dr. Geraint Wiggins}
+\faculty{Faculty of Science and Bio-engineering Sciences}
+\department{Department of Computer Science}   
+\subtitle{Graduation thesis submitted in partial fulfillment of the requirements for the degree of \\Master of Science in Applied Sciences and Engineering: Computer Science}
+\date{Academic year 2018-2019}
