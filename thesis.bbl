@@ -1,6 +1,33 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Aerts%
+\ \BBA {} Gabora%
+}{%
+Aerts%
+\ \BBA {} Gabora%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+aerts2005theory}
+\APACinsertmetastar {%
+aerts2005theory}%
+\begin{APACrefauthors}%
+Aerts, D.%
+\BCBT {}\ \BBA {} Gabora, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A theory of concepts and their combinations II: A
+  Hilbert space representation} {A theory of concepts and their combinations
+  ii: A hilbert space representation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Kybernetes}{34}{1/2}{192--221}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Baars%
 }{%
 Baars%
@@ -71,6 +98,33 @@ Chalmers, D\BPBI J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Chater%
+, Tenenbaum%
+\BCBL {}\ \BBA {} Yuille%
+}{%
+Chater%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+chater2006probabilistic}
+\APACinsertmetastar {%
+chater2006probabilistic}%
+\begin{APACrefauthors}%
+Chater, N.%
+, Tenenbaum, J\BPBI B.%
+\BCBL {}\ \BBA {} Yuille, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+\APACrefbtitle {Probabilistic models of cognition: Conceptual foundations.}
+  {Probabilistic models of cognition: Conceptual foundations.}
+\newblock
+\APACaddressPublisher{}{Elsevier}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chella%
 }{%
 Chella%
@@ -122,6 +176,56 @@ Chella, A.%
   {A cognitive architecture for robot self-consciousness}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Artificial intelligence in medicine}{44}{2}{147--154}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chomsky%
+}{%
+Chomsky%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+chomsky2002syntactic}
+\APACinsertmetastar {%
+chomsky2002syntactic}%
+\begin{APACrefauthors}%
+Chomsky, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2002}.
+\newblock
+\APACrefbtitle {Syntactic structures} {Syntactic structures}.
+\newblock
+\APACaddressPublisher{}{Walter de Gruyter}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Coecke%
+, Sadrzadeh%
+\BCBL {}\ \BBA {} Clark%
+}{%
+Coecke%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+coecke2010mathematical}
+\APACinsertmetastar {%
+coecke2010mathematical}%
+\begin{APACrefauthors}%
+Coecke, B.%
+, Sadrzadeh, M.%
+\BCBL {}\ \BBA {} Clark, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Mathematical foundations for a compositional
+  distributional model of meaning} {Mathematical foundations for a
+  compositional distributional model of meaning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1003.4394}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -282,6 +386,33 @@ Horn, R\BPBI A.%
   matrices}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Matrix analysis}{}{}{313--386}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kemp%
+\ \BBA {} Tenenbaum%
+}{%
+Kemp%
+\ \BBA {} Tenenbaum%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+kemp2008discovery}
+\APACinsertmetastar {%
+kemp2008discovery}%
+\begin{APACrefauthors}%
+Kemp, C.%
+\BCBT {}\ \BBA {} Tenenbaum, J\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The discovery of structural form} {The discovery of
+  structural form}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{105}{31}{10687--10692}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -487,6 +618,32 @@ Pearce, M\BPBI T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Quine%
+\ \BBA {} Quine%
+}{%
+Quine%
+\ \BBA {} Quine%
+}{%
+{\protect \APACyear {1969}}%
+}]{%
+quine1969ontological}
+\APACinsertmetastar {%
+quine1969ontological}%
+\begin{APACrefauthors}%
+Quine, W\BPBI V.%
+\BCBT {}\ \BBA {} Quine, W\BPBI V\BPBI O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1969}.
+\newblock
+\APACrefbtitle {Ontological relativity and other essays} {Ontological
+  relativity and other essays}\ (\BNUM~1).
+\newblock
+\APACaddressPublisher{}{Columbia University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Quinlan%
 }{%
 Quinlan%
@@ -533,6 +690,31 @@ Robertson, H\BPBI P.%
   principle}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Physical Review}{34}{1}{163}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rosch%
+}{%
+Rosch%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+rosch1983prototype}
+\APACinsertmetastar {%
+rosch1983prototype}%
+\begin{APACrefauthors}%
+Rosch, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Prototype classification and logical classification: The
+  two systems} {Prototype classification and logical classification: The two
+  systems}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{New trends in conceptual representation: Challenges to
+  Piaget's theory}{}{}{73--86}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
