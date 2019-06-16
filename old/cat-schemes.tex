@@ -1,0 +1,19 @@
+
+Chinese Restaurant Process is a nonparametric bayesian method that allows for unbounded clustering of new points in a space. Since for any given space, the number of "natural" categories is unknown, or perhaps unbounded, it makes sense to use a process that has the ability to add more categories as more data is seen in a given space, in the same way that humans are able to see more nuance the more trained they are in a given subject.
+
+Locality-Sensitive Hashing allows for only a portion of the space to be searched for candidate categories.  Since points are only categorized together when they are close to eachother, there is no need to examine distant points as candidates.  Locality-sensitive hashing allows us to quickly determine what symbols are similar to a target symbol, and check if they should be categorized together.  This is the same as how humans are able to immediately sense similarity, though may require closer inspection to see if two subjects are actually of the same kind.
+
+
+\subsection{Types}
+Since our conceptual spaces are represented as Hilbert spaces, interpolating a trajectory through a sequence of concepts is equivalent to regressing through the points of the space and sampling from that regression.  As such, we can employ any number of regression techniques from the literature to determine an appropriate trajectory.
+
+\subsubsection{Connect the Dots}
+Though not really regression per say, the simplest method for interpolating between points would be to just draw a straight line between them and sample from that line.  This method has the benefit of being very simple, and may prove to be near-equivalent to other methods if the number of interpolated points is low enough.
+
+The problem with this method is that it is not continuously differentiable and therefore quite "sharp".  This would manifest in the DFT by resulting in high amplitudes at higher frequencies.  It is difficult to say a priori if this is desirable, but it seems in general that we would prefer smoother functions through these points to avoid this effects.
+
+\subsubsection{Gaussian Regression (Kriging)}
+One method for creating a smooth curve through these points is Gaussian Regression.  By thinking of the sequence of points as a multivariate Gaussian distribution, we can think of a distribution of trajectories or functions, i.e. a process, through these points.  By finding the mean function of this process we can find the maximum a posteriori trajectory of the process, resulting in the highest likelihood function through a sequence of points.  This method automatically avoids problems of overfitting inherent in higher-order transformation linear regression methods, though has the problem being computationally expensive.
+
+By utilizing the square exponential kernel for Gaussian regression, the resulting curve will not only by the MAP curve, but also infinitely differentiable, meaning that it is hella smooth.  This smoothness results in a reduction of large high frequency amplitudes that could potentially happen in simpler methods like Connect-the-dots.
+

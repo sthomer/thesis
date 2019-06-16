@@ -1,1 +1,16 @@
 \section{Limitations}
+\label{section:limitations}
+
+\subsection{Exponential Size of Category Representation}
+\label{section:exponentil-size-category-represention}
+
+The primary limitation encountered was due to the problem of tensor rank promotion (see section \ref{section:tensor-rank-promotion}).  With the brain being massively parallel, its possible that this exponential growth in the size of representation and the resulting spectral transform, is not a problem for the human mind.  However, even with significant parallelization of the categorization process, and using the Fast Fourier transform \citep{cooley1965algorithm} to group the spectral representations, the memory requirements alone became beyond extraordinarily large.
+
+To ameliorate this, we repeatedly reduced the resolution of interpolation to hinder this growth, as well as capping the highest abstraction level to 3.  Unfortunately, this may have resulted in categories that are less informative overall, and we were not able to investigate higher level of abstraction, which would potentially yield consistent, semantically rich categories.
+
+\subsection{Categorization Schemes}
+\label{section:categorization-schemes}
+
+The other major limitation was due to varying schemes that were tested in order to implement the categorization process.  Though signficant effort was put into finding different methods to not only adapt to the expontial growth in representation, but also the nature of the raw signal input, this was found to be too difficult to do \textit{a priori}.  Therefore, the adaptive categorization scheme (see section \ref{section:adaptive-categories}) was devised with the initial radius hyperparameter to limit the amount of manual tuning necessary for reasonable categorization.  That being said, the initial radii still had to be manually tuned to fit each level of abstraction for this particular type of input signal.
+
+In addition, as larger training sets were run on the system, there was a corresponding increase in the number of categories produced.  This has a marked effect on the speed at which a new instance is processed since all categories in a space must be checked for candidacy.  In the future, consolidation techniques \citep{wiggins2019learning} can be employed to limit this monotonically increasing number of categories in a given layer.

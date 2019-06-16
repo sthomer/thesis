@@ -1,23 +1,32 @@
 \section{Segmentation}
+\label{section:segmentation}
 
-Segmentation is the process of dividing an input stream into discrete chunks according to a difference function.
+Segmentation is the process operating on the sequential memory that divides an input stream into discrete chunks according to an information-theoretic difference function. \citep{wiggins2019learning}
 
 \subsection{Difference Function}
-The difference function operates on the stream of symbols entering a given dimension and decides where segments begin and end.  Though there are a variety of ways in which to determine where to cut in this chain of symbols, here we will look at their information-theoretic properties to determine a meaningful cut. Primarily, we will look at moving entropy of the signal.  If the entropy rises, then a cut should be a made, marking the end of the current segment and the beginning of a new one.
+\label{section:difference-function}
 
-Since entropy represents the amount of uncertainty at what comes next, it makes sense that a jump in entropy would mark the beginning of a new segment.  For instance, at the beginning of a sentence, entropy is high because the listener has little idea what the speaker will say next. As the sentence proceeds, the speaker will be better able to predict what comes next, meaning entropy is decreasing until the end of the sentences.  Once the sentence is finished, the listener again is less sure what will come next, and so entropy rises.  Therefore, at this rise in entropy, we would make a cut, resulting in a segment naturally representing the sentence just spoken.
+The difference function operates on the stream of symbols entering a given dimension and decides where segments begin and end, and thus where a cut in the stream should be made. Primarily, we track the moving information content and conditional entropy of the stream.  If the information content or entropy rises, then a cut should be a made, marking the end of the current segment and the beginning of a new one.
 
-This segmentation process results in two problems stemming from the two types of sparsity inherent in the segmentation and subsequent abstraction.
+\begin{equation}
+  \Delta(\tau) = \begin{cases}
+    true & \text{ if } H(\tau-1) < H(\tau) \lor h(\tau-1) < h(\tau) \\
+    false & \text{ otherwise }
+  \end{cases}
+\end{equation}
+
+This segmentation process results in two problems stemming from the two types of sparsity inherent in the segmentation and subsequent abstraction when working in continuous, high-dimensional spaces: symbol sparsity and content sparsity.
 
 \subsection{Symbol Sparsity}
-The first kind of sparsity arises from the length of the segment produced in the segmentation process.  Since the abstraction of the segment is its spectral transform, and we use the Discrete Fourier Transform (see section ?) to find the representative symbol in the superior abstraction layer, we run into precision problems due to the uncertainty principle of signal sparsity.  When performing a DFT, the signal precision is limited by the number of non-zero coefficients in either the time or frequency domain.  Therefore, if the number of symbols in a given segment is small, its spectral representation will be imprecise.  Therefore, it is necessary to perform interpolation (see section ?) to fill out the signal, so that high precision is maintained in the spectral transformation.
+\label{section:symbol-sparsity}
+
+Symbol sparsity arises from the length of the segment produced in the segmentation process.  Since the abstraction of the segment is its spectral transform, and we use the DFT to create the representative symbol in the superordinate abstraction layer, we run into precision problems due to the uncertainty principle of signal sparsity \citep{robertson1929uncertainty}.  When performing a DFT, the signal precision is limited by the number of non-zero coefficients in either the time or frequency domain.  Therefore, if the number of symbols in a given segment is small, its spectral representation will be imprecise.  Therefore, it is necessary to perform interpolation (see section \ref{section:interpolation}) to fill out the signal, so that high precision is maintained in the spectral transformation.
 
 \subsection{Content Sparsity}
-The second kind of sparsity is due to the nature of the symbol contents.  Since in the case of audio perception, the content of a symbol is a high-dimensional tensor of complex coefficients, not only are the possible values of each dimension uncountably infinite, there are a high number of uncountably infinite dimensions for each symbol.  Therefore, it is incredibly unlikely that any two symbols have exactly the same value for every dimension in the conceptual space in which they live.  
+\label{section:content-sparsity}
 
-This poses a problem for determining the entropy and information content of symbols, which rely on the probability of a symbol.  If every symbol is unique, in the limit, the probability of seeing one in the signal is 0, meaning the entropy and information content each symbol in the signal would be 0. Really, the the probability of a unique event is meaningless, and therefore, even talking about its entropy is also meaningless.  
+Content sparsity is due to the nature of the symbol contents being represented in a continuous, high-dimensional Hilbert space.  Since in the case of audio perception, the content of a symbol is a high-dimensional tensor of complex coefficients, not only are there a high number of dimensions, each dimension has an uncountably infinite number of possible values.  Therefore, it is incredibly unlikely that any two symbols have exactly the same value for every dimension in the conceptual space in which they live.
 
-Though the space in which the symbols live is so sparse, we would still like to say that if two symbols are close enough together, for all intents and purposes (intensive porpoises), they are the same symbol.  This is accomplished through categorization (see section ?), where a label is attached to each symbol according to its category.  If two symbols have the same label, then they are equal, even though they may have different contents, that is, different values in their complex tensors.
+This poses a problem for determining the entropy and information content of symbols, which rely on the probability of seeing a symbol.  Since we estimate this probability by counting the frequency of observed symbols, if every symbol is unique, in the limit, the probability of seeing one in the signal is 0, meaning the information content of each symbol in the signal would be 0 as well.  In frequentist terms, talking about the the probability of a unique event is meaningless, and therefore, referring to a unique symbol's information content or entropy is also meaningless.
 
-\subsection{Symbol Generation}
-When a segment is cut from the stream of symbols in a given dimension, a new symbol is generated that represents that segment in the superior abstraction layer.  At least in the case of all dimensions supervenient on audio perception, this means that the abstracted symbol is the spectral transformation of the segment.
+Though the space in which the symbols live is so sparse, we would still like to say that if two symbols are close enough together in space, for all intents and purposes, they are the same symbol.  This is accomplished through categorization (see section \ref{section:categorization}), where a label is attached to each symbol according to its category.  If two symbols have the same label, then they are equal, even though they may have different contents -- that is, different values in their representative complex tensors.

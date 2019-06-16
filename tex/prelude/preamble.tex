@@ -22,22 +22,26 @@
 \usepackage[T1]{fontenc}
 %\usepackage[scaled]{uarial}
 \usepackage{tocloft}
-%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{blindtext}
 \usepackage{listings}
 \usepackage{fancyhdr}
+
 \definecolor{java}{RGB}{127,0,85}
 \newcommand{\code}[1]{\texttt{#1}}
 \lstset{language=Java, basicstyle=\scriptsize,breaklines=true, keywordstyle=\color{java},tabsize=1, frame=single}
+
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \addtocontents{toc}{\cftpagenumbersoff{chapter}}
+
 \newtheorem{hyp}{Hypothesis} 
 \newframedtheorem{defshad}{Definition}
 \newtheorem{defPim}{Definition}
 \newframedtheorem{pilePrinc}{Principle}
 \newframedtheorem{theo}{}
 \newtheorem{req}{Requirement}
+
 \setlength{\marginparwidth}{0pt}
 \makeatletter
 \renewcommand*{\sectfont}{\bfseries}
@@ -64,17 +68,3 @@
       {.5\baselineskip}%
       {\normalfont\normalsize\bfseries}}
 \makeatother
-
-
-\author{Steven Homer}
-\title{Learning Hierarchical Spectral \\
-Representations of Human Speech \\
-in the Information Dynamics of Thinking}
-\promotortitle{Promoter}
-\promotor{Prof. Dr. Dr. Geraint Wiggins}
-\advisortitle{Advisor}                                                            
-\advisors{Prof. Dr. Dr. Geraint Wiggins}
-\faculty{Faculty of Science and Bio-engineering Sciences}
-\department{Department of Computer Science}   
-\subtitle{Graduation thesis submitted in partial fulfillment of the requirements for the degree of \\Master of Science in Applied Sciences and Engineering: Computer Science}
-\date{Academic year 2018-2019}

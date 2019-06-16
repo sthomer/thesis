@@ -1,0 +1,21 @@
+\section{Discussion}
+\label{section:discussion}
+
+\subsection{Addressing Categorical Inconsistencies}
+\label{section:addressing-categorical-inconsistencies}
+
+Though the category similarity matrix confirms that some similar-sounding syllables are either categorized together or at least near each other in the space, there are also confusing portions.  For instance, the entire word 'water' is categorized into a few very similar categories.  At higher levels of abstraction than seen here, one might expect that whole words would compose a single category, but since at abstraction level 3 we seem to be still mostly categorizing syllables and diphtongs, we would not expect the entire word to be one category.
+
+This over-categorization may be due to two issues.  The first may be that the categorization is too eager in this location, resulting in different points being grouped together that should not be.  Though a significant amount of tuning was performed to find good initial radii for each layer, it's possible that a lower radius at this level would result in a more intuitive categorization for this particular region.
+
+On the other hand, it may instead be due to the segmentation scheme employed in this implementation.  Here, we segment the stream at either a rise in entropy \textit{or} a rise in information content, resulting in numerous, relatively short segments.  Though there are a large number of segments, any given segment will not contain much information, by nature of its short length.  For a less eager segmentation, we could segment at a rise in just one of the measures.  This would result in fewer but longer segments with more information per segment. Though there would be fewer resulting categories from this reduced scheme, each category would be richer in that it represents more information, and may result in categories that consistently represent full syllables at this level of abstraction.
+
+\subsection{Meaningful Categorizations}
+\label{section:meaningful-categorizations}
+
+That being said, though not perfect, we do observe the emergence of a few consistent categories that represent syllables at abstraction layer 3.  Since we also clearly see that similar trajectories are being categorized together in higher layers, it is a tenuous confirmation that the abstraction process as set forth in the theory behaves as intended.  We can see that even at a relatively low abstraction level 3, the hierarchical spectral representations of the speech signal are coalescing into categories that could be said to represent human speech sounds.  One could imagine, given a few more levels of abstraction and significantly more training, that the higher-level abstraction categories would become consistent, meaningful representations of the human speech signals they are learned from.
+
+\subsection{Unified Approach to Perceptual Representation}
+\label{section:unified-approach-to-perceptual-representation}
+
+What makes these results exciting is not just that we are beginning to see the emergence of syllables as discrete categories, but the general applicability of this method.  Not only might we expect to see more complex elements of human speech such as words, sentences, and even syntax start emerge as categories in higher levels of abstraction, but the processes of segmentation, categorization, and abstraction are agnostic about the domain of the data in operation. That is, instead of using human speech signals as the raw input, another audio domain such as music could be used, as in IDyOM \citep{pearce2005construction}.  In general, just about any time-varying signal could be used instead.  Since other modes of perception such as vision can be modeled as time-varying signals, if consistent categories can be found for these human speech signals, perhaps semantically rich categories could be found for these other domains as well.  Doing so would uncover related semantics from different areas of perception, resulting in a more holistic coginitive architecture that ties in the multitude of domains of human experience.

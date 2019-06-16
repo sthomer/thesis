@@ -1,6 +1,29 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Baars%
+}{%
+Baars%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+baars1993cognitive}
+\APACinsertmetastar {%
+baars1993cognitive}%
+\begin{APACrefauthors}%
+Baars, B\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1993}.
+\newblock
+\APACrefbtitle {A cognitive theory of consciousness} {A cognitive theory of
+  consciousness}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bernkopf%
 }{%
 Bernkopf%
@@ -25,30 +48,159 @@ Bernkopf, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Boltzmann%
+Chalmers%
 }{%
-Boltzmann%
+Chalmers%
 }{%
-{\protect \APACyear {1970}}%
+{\protect \APACyear {1996}}%
 }]{%
-boltzmann1970weitere}
+chalmers1996conscious}
 \APACinsertmetastar {%
-boltzmann1970weitere}%
+chalmers1996conscious}%
 \begin{APACrefauthors}%
-Boltzmann, L.%
+Chalmers, D\BPBI J.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1970}{}{}.
+\APACrefYear{1996}.
 \newblock
-{\BBOQ}\APACrefatitle {Weitere studien {\"u}ber das w{\"a}rmegleichgewicht
-  unter gasmolek{\"u}len} {Weitere studien {\"u}ber das w{\"a}rmegleichgewicht
-  unter gasmolek{\"u}len}.{\BBCQ}
+\APACrefbtitle {The conscious mind: In search of a fundamental theory} {The
+  conscious mind: In search of a fundamental theory}.
 \newblock
-\BIn{} \APACrefbtitle {Kinetische Theorie II} {Kinetische theorie ii}\ (\BPGS\
-  115--225).
+\APACaddressPublisher{}{Oxford university press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chella%
+}{%
+Chella%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+chella2015cognitive}
+\APACinsertmetastar {%
+chella2015cognitive}%
+\begin{APACrefauthors}%
+Chella, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A cognitive architecture for music perception exploiting
+  conceptual spaces} {A cognitive architecture for music perception exploiting
+  conceptual spaces}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Applications of conceptual spaces} {Applications of
+  conceptual spaces}\ (\BPGS\ 187--203).
 \newblock
 \APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chella%
+, Frixione%
+\BCBL {}\ \BBA {} Gaglio%
+}{%
+Chella%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+chella2008cognitive}
+\APACinsertmetastar {%
+chella2008cognitive}%
+\begin{APACrefauthors}%
+Chella, A.%
+, Frixione, M.%
+\BCBL {}\ \BBA {} Gaglio, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A cognitive architecture for robot self-consciousness}
+  {A cognitive architecture for robot self-consciousness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Artificial intelligence in medicine}{44}{2}{147--154}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cooley%
+\ \BBA {} Tukey%
+}{%
+Cooley%
+\ \BBA {} Tukey%
+}{%
+{\protect \APACyear {1965}}%
+}]{%
+cooley1965algorithm}
+\APACinsertmetastar {%
+cooley1965algorithm}%
+\begin{APACrefauthors}%
+Cooley, J\BPBI W.%
+\BCBT {}\ \BBA {} Tukey, J\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1965}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An algorithm for the machine calculation of complex
+  Fourier series} {An algorithm for the machine calculation of complex fourier
+  series}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Mathematics of computation}{19}{90}{297--301}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Deutsch%
+}{%
+Deutsch%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+deutsch2013psychology}
+\APACinsertmetastar {%
+deutsch2013psychology}%
+\begin{APACrefauthors}%
+Deutsch, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Psychology of music} {Psychology of music}.
+\newblock
+\APACaddressPublisher{}{Elsevier}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Forth%
+, Agres%
+, Purver%
+\BCBL {}\ \BBA {} Wiggins%
+}{%
+Forth%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+forth2016entraining}
+\APACinsertmetastar {%
+forth2016entraining}%
+\begin{APACrefauthors}%
+Forth, J.%
+, Agres, K.%
+, Purver, M.%
+\BCBL {}\ \BBA {} Wiggins, G\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entraining IDyOT: timing in the information dynamics of
+  thinking} {Entraining idyot: timing in the information dynamics of
+  thinking}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in psychology}{7}{}{1575}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -72,6 +224,64 @@ G{\"a}rdenfors, P.%
   The geometry of thought}.
 \newblock
 \APACaddressPublisher{}{MIT press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Garofolo%
+, Lamel%
+, Fisher%
+, Fiscus%
+\BCBL {}\ \BBA {} Pallett%
+}{%
+Garofolo%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1993}}%
+}]{%
+garofolo1993darpa}
+\APACinsertmetastar {%
+garofolo1993darpa}%
+\begin{APACrefauthors}%
+Garofolo, J\BPBI S.%
+, Lamel, L\BPBI F.%
+, Fisher, W\BPBI M.%
+, Fiscus, J\BPBI G.%
+\BCBL {}\ \BBA {} Pallett, D\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {DARPA TIMIT acoustic-phonetic continous speech corpus
+  CD-ROM. NIST speech disc 1-1.1} {Darpa timit acoustic-phonetic continous
+  speech corpus cd-rom. nist speech disc 1-1.1}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{NASA STI/Recon technical report n}{93}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Horn%
+\ \BBA {} Johnson%
+}{%
+Horn%
+\ \BBA {} Johnson%
+}{%
+{\protect \APACyear {1990}}%
+}]{%
+horn1990norms}
+\APACinsertmetastar {%
+horn1990norms}%
+\begin{APACrefauthors}%
+Horn, R\BPBI A.%
+\BCBT {}\ \BBA {} Johnson, C\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1990}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Norms for vectors and matrices} {Norms for vectors and
+  matrices}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Matrix analysis}{}{}{313--386}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -124,6 +334,208 @@ Kirsh, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+LeCun%
+, Bengio%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+LeCun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+lecun2015deep}
+\APACinsertmetastar {%
+lecun2015deep}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+, Bengio, Y.%
+\BCBL {}\ \BBA {} Hinton, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep learning} {Deep learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{nature}{521}{7553}{436}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+MacKay%
+\ \BBA {} Mac~Kay%
+}{%
+MacKay%
+\ \BBA {} Mac~Kay%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+mackay2003information}
+\APACinsertmetastar {%
+mackay2003information}%
+\begin{APACrefauthors}%
+MacKay, D\BPBI J.%
+\BCBT {}\ \BBA {} Mac~Kay, D\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2003}.
+\newblock
+\APACrefbtitle {Information theory, inference and learning algorithms}
+  {Information theory, inference and learning algorithms}.
+\newblock
+\APACaddressPublisher{}{Cambridge university press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McAdams%
+\ \BBA {} Saariaho%
+}{%
+McAdams%
+\ \BBA {} Saariaho%
+}{%
+{\protect \APACyear {1985}}%
+}]{%
+mcadams1985qualities}
+\APACinsertmetastar {%
+mcadams1985qualities}%
+\begin{APACrefauthors}%
+McAdams, S.%
+\BCBT {}\ \BBA {} Saariaho, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1985}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Qualities and functions of musical timbre} {Qualities
+  and functions of musical timbre}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {1985 International Computer Music Conference} {1985
+  international computer music conference}\ (\BPGS\ 367--374).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moore%
+}{%
+Moore%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+moore2012introduction}
+\APACinsertmetastar {%
+moore2012introduction}%
+\begin{APACrefauthors}%
+Moore, B\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2012}.
+\newblock
+\APACrefbtitle {An introduction to the psychology of hearing} {An introduction
+  to the psychology of hearing}.
+\newblock
+\APACaddressPublisher{}{Brill}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Murphy%
+}{%
+Murphy%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+murphy2007conjugate}
+\APACinsertmetastar {%
+murphy2007conjugate}%
+\begin{APACrefauthors}%
+Murphy, K\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Conjugate Bayesian analysis of the Gaussian
+  distribution} {Conjugate bayesian analysis of the gaussian
+  distribution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{def}{1}{2$\sigma$2}{16}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pearce%
+}{%
+Pearce%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+pearce2005construction}
+\APACinsertmetastar {%
+pearce2005construction}%
+\begin{APACrefauthors}%
+Pearce, M\BPBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2005}.
+\unskip\
+\newblock
+\APACrefbtitle {The construction and evaluation of statistical models of
+  melodic structure in music perception and composition} {The construction and
+  evaluation of statistical models of melodic structure in music perception and
+  composition}\ \APACtypeAddressSchool {\BUPhD}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {}{City University London}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Quinlan%
+}{%
+Quinlan%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+quinlan1983learning}
+\APACinsertmetastar {%
+quinlan1983learning}%
+\begin{APACrefauthors}%
+Quinlan, J\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning efficient classification procedures and their
+  application to chess end games} {Learning efficient classification procedures
+  and their application to chess end games}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Machine learning} {Machine learning}\ (\BPGS\ 463--482).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Robertson%
+}{%
+Robertson%
+}{%
+{\protect \APACyear {1929}}%
+}]{%
+robertson1929uncertainty}
+\APACinsertmetastar {%
+robertson1929uncertainty}%
+\begin{APACrefauthors}%
+Robertson, H\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1929}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The uncertainty principle} {The uncertainty
+  principle}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review}{34}{1}{163}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Shannon%
 }{%
 Shannon%
@@ -144,6 +556,32 @@ Shannon, C\BPBI E.%
   theory of communication}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Bell system technical journal}{27}{3}{379--423}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sivik%
+\ \BBA {} Taft%
+}{%
+Sivik%
+\ \BBA {} Taft%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+sivik1994color}
+\APACinsertmetastar {%
+sivik1994color}%
+\begin{APACrefauthors}%
+Sivik, L.%
+\BCBT {}\ \BBA {} Taft, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1994}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Color naming: A mapping in the IMCS of common color
+  terms} {Color naming: A mapping in the imcs of common color terms}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Scandinavian journal of psychology}{35}{2}{144--164}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -177,6 +615,28 @@ Sproat, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sutton%
+\ \protect \BOthers {.}}{%
+Sutton%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+sutton1998introduction}
+\APACinsertmetastar {%
+sutton1998introduction}%
+\begin{APACrefauthors}%
+Sutton, R\BPBI S.%
+\BCBT {}\ \BOthersPeriod {.}
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1998}.
+\newblock
+\APACrefbtitle {Introduction to reinforcement learning} {Introduction to
+  reinforcement learning}\ (\BVOL~135).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Turing%
 }{%
 Turing%
@@ -203,26 +663,51 @@ Turing, A\BPBI M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-von Neumann%
+Tversky%
 }{%
-von Neumann%
+Tversky%
 }{%
-{\protect \APACyear {1955}}%
+{\protect \APACyear {1977}}%
 }]{%
-neumann1955mathematical}
+tversky1977features}
 \APACinsertmetastar {%
-neumann1955mathematical}%
+tversky1977features}%
 \begin{APACrefauthors}%
-von Neumann, J.%
+Tversky, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYear{1955}.
+\APACrefYearMonthDay{1977}{}{}.
 \newblock
-\APACrefbtitle {Mathematical foundations of quantum mechanics} {Mathematical
-  foundations of quantum mechanics}.
+{\BBOQ}\APACrefatitle {Features of similarity.} {Features of
+  similarity.}{\BBCQ}
 \newblock
-\APACaddressPublisher{}{Princeton university press}.
+\APACjournalVolNumPages{Psychological review}{84}{4}{327}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wiggins%
+}{%
+Wiggins%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+wiggins2010cue}
+\APACinsertmetastar {%
+wiggins2010cue}%
+\begin{APACrefauthors}%
+Wiggins, G\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Cue abstraction, paradigmatic analysis and information
+  dynamics: Towards music analysis by cognitive model} {Cue abstraction,
+  paradigmatic analysis and information dynamics: Towards music analysis by
+  cognitive model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Musicae Scientiae}{14}{2\_suppl}{307--331}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -247,6 +732,60 @@ Wiggins, G\BPBI A.%
   consciousness: the information dynamics of thinking}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Physics of life reviews}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wiggins%
+\ \BBA {} Sanjekdar%
+}{%
+Wiggins%
+\ \BBA {} Sanjekdar%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+wiggins2019learning}
+\APACinsertmetastar {%
+wiggins2019learning}%
+\begin{APACrefauthors}%
+Wiggins, G\BPBI A.%
+\BCBT {}\ \BBA {} Sanjekdar, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning and Consolidation as Re-representation:
+  Revising the Meaning of Memory} {Learning and consolidation as
+  re-representation: Revising the meaning of memory}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in psychology}{10}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Williams%
+\ \BBA {} Rasmussen%
+}{%
+Williams%
+\ \BBA {} Rasmussen%
+}{%
+{\protect \APACyear {1996}}%
+}]{%
+williams1996gaussian}
+\APACinsertmetastar {%
+williams1996gaussian}%
+\begin{APACrefauthors}%
+Williams, C\BPBI K.%
+\BCBT {}\ \BBA {} Rasmussen, C\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Gaussian processes for regression} {Gaussian processes
+  for regression}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 514--520).
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

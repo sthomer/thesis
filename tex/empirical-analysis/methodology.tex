@@ -1,7 +1,41 @@
 \section{Methodology}
+\label{section:methodology}
 
 \subsection{Parameterization}
+\label{section:parameterization}
+
+The parameterization of the implementation comes from two parameters: the resolution of interpolation $r$, and the initial radii $\rho_0$ of a category for each abstraction layer.  The resolution of interpolation is set to equal the sample window size used to slice the waveform, resulting in each rank of the tensor to be the same size at any given level.  Though we expect that a larger resolution will result in semantically richer categories in the higher levels, the exponential explosion in the size of the representative tensor, due to tensor rank promotion (see section \ref{section:tensor-rank-promotion}), results in exponentially increasing memory requirements (see table \ref{table:memory-requirements}). This limits the resolution to $r=16$ samples in our implementation.  However, it was found that below a certain resolution, the results are somewhat similar.  For instance, a 32-sample resolution behaves similarly to the 16-sample resolution, while having significantly higher processing and memory requirements.
+
+\begin{table}
+\centering
+\begin{tabular}{@{}lllll@{}}
+  \toprule
+  Resolution $r$ & Layer $\alpha = 0$ & Layer $\alpha = 1$ & Layer $\alpha = 2$ & Layer $\alpha = 3$ \\
+  \midrule
+  16 & 0.25 KB & 4 KB & 64 KB & 1 MB \\
+  32 & 0.5 KB & 16 KB & 512 KB & 16 MB \\
+  64 & 1 KB & 64 KB & 4 MB & 268 MB \\
+  128 & 2 KB & 262 KB & 34 MB & 4.3 GB \\
+  \bottomrule
+\end{tabular}
+\caption{Memory Requirements for a single category with elements composed of 128-bit complex numbers}
+\label{table:memory-requirements}
+\end{table}
+
+The initial radius $\rho_0$ for a new category in a given dimension has the largest effect on categorization within that dimension, and therefore also affects the segmentation of that layer.  Though the adaptive categorization method will alter the category volume according to its members, the initial radius will determine how willing a dimension as a whole is to categorize new instances.  If this initial radius is too small, then nothing will be categorized, and therefore nothing can be segmented.  If it is too large, then instances that should not be categorized together will be.  Due to the exponential growth in the number of elements in a tensor at each level, the initial radius parameters also grow exponentially.  Specifically, at zero-indexed abstraction level $\alpha$, the initial radius was manually set to $\rho_0 = 10^{\alpha}$.
 
 \subsection{Data}
+\label{section:data}
+
+In order to evaluate the implementation on human speech, the TIMIT corpus \citep{garofolo1993darpa} was used.  This dataset has a large variety of American accents speaking a specific set of nonsense phrases that is meant to be used for natural language processing purposes.  Though having a large variety of speakers on which to train in order to diversify the semantic memory is useful, more importantly, each speech clip in the dataset is accompanied by annotations connecting words and syllables to a specific sample in the clip.  This allows us to compare the annotations and spectrogram of a clip with the categories of each layer in one unified visualization.  This allows us to examine if, for instance, categories at higher levels are associated with certain words or syllables.  
+
+Since the word and syllable annotations mark qualitavely different sounds, these boundaries can be compared with the resulting categories at each level of abstraction to investigate if category boundaries align with word or syllable boundaries. If they do consistently, then this would be confirmation that the segmentation, categorization, and abstraction processes are working as envisioned in the theory. 
 
 \subsection{Experiments}
+\label{section:experiments}
+
+The IDyOT was trained on a 10-clip set from a single speaker, ranging from 1.5 seconds to 4 seconds, with most clips being around 3 seconds.  With a resolution of $r=16$ samples, this test set results in over 26000 distinct slices of speech to be analyzed.  Though, theoretically the maximum abstraction layer is unknown, but likely quite large, here it was capped at the fourth level $\alpha = 3$ due to processing and memory limitations.  The resulting categorization in semantic memory was then used to seed a sequential memory from a single clip of the same speaker.
+
+Here the speaker is a young woman from somewhere in New England, perhaps a borough of New York or Boston, identified as TRAIN-DR1-FCJF0 in the TIMIT corpus.  After training on all available audio for this speaker, the SA1 clip was used for analysis, which has the same speaker reading the nonsense line: "She had your dark suit in greasy wash water all year."
+
+In an earlier iteration of the implementation, a larger 53-clip training set containing a variety of different accents and sentences was used to train the IDyOT, but the resulting visualization (see section \ref{section:results}) was not qualitatively different than the 10-clip set, while actually being more difficult to inspect due to the increased number of categories from the larger set.  Therefore, the 10-clip training set was used for visualization.

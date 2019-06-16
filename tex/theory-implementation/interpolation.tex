@@ -1,41 +1,38 @@
 \section{Interpolation}
-When talking about trajectories through conceptual spaces, we refer to interpolation as the use of virtual concepts that factor into the abstraction to the superior space.  Since we formalized conceptual spaces as Hilbert spaces, we can analogously talk about drawing a curve or curve through points in the space.  Hence, the process of interpolation is simply sampling from a regression.
+\label{section:interpolation}
 
-\subsection{Symbol Sparsity}
-As discussed in section (?) on segmentation, interpolation is necessary to deal with symbol sparsity in a given segment.  To reiterate, this problem arises due to the use of the Discrete Fourier Transform in the abstraction process.  Since the precision of a signal, either in the time or frequency domains, is determined by the number of non-zero coefficients describing that signal, if the segmentation process results in a relatively short segment, the number of coefficients will be small, and the resulting transformation imprecise.
+When talking about trajectories through conceptual spaces, we refer to interpolation as the use of representative virtual points to perform the abstraction process instead of the actual values of the sequence.  Since we formalized semantic spaces as Hilbert spaces, we can analogously talk about drawing a time-parametric regression curve through points in the space.  Hence, the process of interpolation is simply sampling from a regression.
 
-The way to deal with this imprecision is fill in coefficients in an informed way such that the transform of the signal accurately represents the original signal while maintaining higher precision.  This is valid because we can think of the sparse signal as a sequence of samples from a function, and by intelligently regressing on those samples, we can obtain the representative function.  By interpolating, we are simply drawing more samples from that regressed function to deal with the precision limits of the DFT.
+\subsection{Signal Sparsity}
+\label{section:signal-sparsity}
 
-\subsection{Spatial Geometry}
-Though interpolation is necessary primarily to deal with symbol sparsity of a segment, it is also the main vehicle in which the geometry of the conceptual space induces the path of the trajectory of symbols.  Since in the Information Dynamics of Thinking, the interpretation of any space is determined by its inner product, we need to interpolate through that space in order to "see" the geometry.
+As discussed in section \ref{section:symbol-sparsity}, interpolation is necessary to deal with symbol sparsity in a given segment.  To reiterate, this problem arises due to the use of the DFT in the abstraction process.  Since the precision of the transform is determined by the number of non-zero coefficients describing that signal, if the segmentation process results in a relatively short segment, the number of coefficients will be small, and the resulting transformation imprecise.  The way to deal with this imprecision is fill in coefficients such that the transform of the signal accurately represents the original signal, thereby producing a higher precision transform.  This is valid because we can think of the sparse signal as a sequence of samples from a function, and by regressing on those samples, we can obtain an approximate, but representative function of that segment.
 
-\begin{figure}
-  \centering
-  \begin{subfigure}[H]{0.45\linewidth}
-    \def\svgwidth{\linewidth}
-    \includegraphics[width=\linewidth]{fig/interpolation-cartesian.eps}
-    \caption{Cartesian Trajectory}
-  \end{subfigure}
-  \begin{subfigure}[H]{0.45\linewidth}
-    \def\svgwidth{\linewidth}
-    \includegraphics[width=\linewidth]{fig/interpolation-radial.eps}
-    \caption{Radial Trajectory}
-  \end{subfigure}
-  \caption{Example of effect of spatial geometry on interpolation}
-\end{figure}
+\subsection{Hilbert Space Isomorphism}
+\label{section:hilbert-space-isomorphism}
 
-For instance, suppose we have three 2D symbols of which we want to draw a trajectory through. Consider two different spaces for conceiving those points: Cartesian (x, y) and Radial (r, $\theta$). Suppose we take the DFT of three points, i.e. as a trajectory without interpolation, in each of the two spaces.  Since the values of each point are exactly the same for both spaces, when examining the transform, there would be no way to tell which space it came from.  If instead we draw lines through the points and interpolate before taking the transform, we see clearly that the interpolated points differ between the two spaces, and so the transform of each trajectory will also be different.  In this way, the information about the geometry of the space can have an effect on the abstraction of the trajectory in that space.
+One fundamental aspect of Hilbert spaces is that all spaces of the same number of dimensions, even infinite, are isomorphic to all other Hilbert spaces of the same number of dimensions \citep{kennedy2013hilbert}.  Since we are using finite-dimensional spaces, to allow comparison between two points, we need their representative tensors to not only be of the same rank, but for each rank of the tensor to be the same size, so that the compared points have an equal number of dimensions.  Put another way, all points of a given space must have the same shape: that of the space.
 
-\subsection{Types}
-Since our conceptual spaces are represented as Hilbert spaces, interpolating a trajectory through a sequence of concepts is equivalent to regressing through the points of the space and sampling from that regression.  As such, we can employ any number of regression techniques from the literature to determine an appropriate trajectory.
+Here, the problem arises during segmentation.  Since each segment in a given abstraction layer can be of arbitrary length, but we want the spectral transformations of all segments in a subordinate space to land in a single superordinate space, the transformation of the each segment must be taken over the same number of points.  Interpolation allows us to infer a curve through the points of a segment and place the required number of virtual points on that curve such that all segments have the same number of virtual points.  Then by taking the Fourier transform of these virtual points, we can be assured that the resulting spectral representation has the exact shape required to land in the space of the superordinate abstraction layer.
 
-\subsubsection{Connect the Dots}
-Though not really regression per say, the simplest method for interpolating between points would be to just draw a straight line between them and sample from that line.  This method has the benefit of being very simple, and may prove to be near-equivalent to other methods if the number of interpolated points is low enough.
+\subsection{Regression Sampling}
+\label{section:regression-sampling}
 
-The problem with this method is that it is not continuously differentiable and therefore quite "sharp".  This would manifest in the DFT by resulting in high amplitudes at higher frequencies.  It is difficult to say a priori if this is desirable, but it seems in general that we would prefer smoother functions through these points to avoid this effects.
+In order to realize this process, we first regress through the available points of a segment.  In order to regress through the points, each point is assigned an index according to its relative place in the trajectory, and regression is performed through that series.  It is important to maintain the relative "lengths" of each point in this trajectory, where the length corresponds to the length of the segment of which this point is a spectral transformation in the subordinate layer.  Since segments are likely to be of different lengths, in this way, points at higher abstraction layers still maintain a sense of their connection to the base layer's time domain, yet still being time-invariant.  By spreading the index of a giving point according to its length for regression, this sense of relative length is maintained.
 
-\subsubsection{Gaussian Regression (Kriging)}
-One method for creating a smooth curve through these points is Gaussian Regression.  By thinking of the sequence of points as a multivariate Gaussian distribution, we can think of a distribution of trajectories or functions, i.e. a process, through these points.  By finding the mean function of this process we can find the maximum a posteriori trajectory of the process, resulting in the highest likelihood function through a sequence of points.  This method automatically avoids problems of overfitting inherent in higher-order transformation linear regression methods, though has the problem being computationally expensive.
+With the points now arranged according to their relative lengths, regression can be performed. Though the proper regression technique is still open to future research, in this implementation, Gaussian process regression \citep{williams1996gaussian} is employed.  Once the regression curve is found, the number of points according to the resolution hyperparameter $r$ is taken at equal intervals from the curve.  These virtual points will then be used in the spectral transformation of the abstraction process.
 
-By utilizing the square exponential kernel for Gaussian regression, the resulting curve will not only by the MAP curve, but also infinitely differentiable, meaning that it is hella smooth.  This smoothness results in a reduction of large high frequency amplitudes that could potentially happen in simpler methods like Connect-the-dots.
+It should be noted that the value used for the the actual points in the regression are not of the points themselves, but rather of the centroid of the category that each point belongs to.  Therefore, when performing the regression, we are drawing a curve through categories instead of drawing a curve through instances.  This has the effect of making the spectral representations of similar trajectories consistent, thereby allowing them to land in the same region in the superordinate layer.
+
+\subsection{Gaussian Process Regression}
+\label{subsection:gaussian-process-regression}
+
+One method for creating a smooth curve through these points is Gaussian process regression \citep{williams1996gaussian}.  By thinking of a sequence of points of a trajectory as a being drawn from a multivariate Gaussian distribution, we can think of a distribution of functions, i.e. a process, through those points.  The expectation of this process is the maximum a posteriori (MAP) function of the distribution, resulting in the highest likelihood trajectory through a sequence of points.  This method automatically avoids problems of overfitting inherent in higher-order transformation linear regression methods, though has the problem being prohibitively computationally expensive for a large number of points.  Fortunately, in this implementation the number of points is equal to the resolution of interpolation, which is quite small.
+
+By utilizing the squared exponential kernel for Gaussian regression, the resulting trajectory will not only by the MAP curve, but also infinitely differentiable, meaning that it is maximially smooth.  This smoothness pays dividends when taking the Fourier transform of the trajectory, as the less smooth a sampled signal is, the larger the amplitude of high frequency artifacts of the Fourier transform become. We would like to avoid these artifacts, making this method of regression ideal for an interpolated spectral representation.
+
+%\subsection{Trajectory Geometry}
+%Though interpolation is necessary primarily to deal with problems mentioned above, it is also the main vehicle in which the geometry of the conceptual space imposes on the path of the trajectory of symbols.  Since in the Information Dynamics of Thinking, the interpretation of any space is determined by its inner product, we need to interpolate through that space in order to see the geometry.
+%For instance, suppose we have three 2D symbols of which we want to draw a trajectory through. Consider two different spaces for conceiving those points: Cartesian (x, y) and Radial (r, $\theta$). Suppose we take the DFT of three points, i.e. as a trajectory without interpolation, in each of the two spaces.  Since the values of each point are exactly the same for both spaces, when examining the transform, there would be no way to tell which space it came from.  If instead we draw lines through the points and interpolate before taking the transform, we see clearly that the interpolated points differ between the two spaces, and so the transform of each trajectory will also be different.  In this way, the information about the geometry of the space can have an effect on the abstraction of the trajectory in that space.
+
 

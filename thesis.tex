@@ -1,38 +1,79 @@
-\include{tex/prelude/preamble}
+%\include{tex/prelude/preamble}
+
+\documentclass[12pt]{report}
+\usepackage{vub}
+
+\usepackage{apacite}
+\usepackage{natbib}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[toc,page]{appendix}
+\usepackage{spverbatim}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{bm}
 \usepackage{svg}
+\usepackage{soul}
+\usepackage{booktabs}
 
 \def\innerproduct{\langle\cdot _, \cdot\rangle}
 \def\orthseq{\{ \varphi_n \}_{n=0}^\infty}
 
-\include{tex/prelude/prelude}
+%\include{tex/prelude/prelude}
+
+\title{Learning Hierarchical Spectral Representations of Human Speech in the Information Dynamics of Thinking}
+\faculty{Sciences \& Bioengineering Sciences}
+\pretitle{Thesis submitted in partial fulfilment of the requirements for the degree of Master of Science in Applied Sciences and Engineering: Computer Science}
+\promotors{Supervisor: Prof. Dr. Dr. Geraint Wiggins}
+%\advisors{Advisor: Prof. Dr. Dr. Geraint Wiggins}
+\author{Steven Homer}
+\date{2018-2019}
+
+\linespread{1.2}
+\begin{document}
+\maketitle
+
+\title{Learning Hierarchical Spectral Representations of Human Speech in the Information Dynamics of Thinking}
+\faculty{Wetenschappen \& Bio-ingenieurswetenschappen}
+\pretitle{Proef ingediend met het oog op het behalen van de graad van Master of Science in Applied Sciences and Engineering: Computer Science}
+%\promotors{Promotor: Prof. Dr. Dr. Geraint Wiggins}
+%\advisors{Begeleider: Prof. Dr. Dr. Geraint Wiggins}
+%\author{Steven Homer}
+%\date{2018-2019}
+\maketitle
+
+\begin{abstract}
+  ABSTRACT
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
 
 \chapter{Introduction}
-\include{tex/introduction/introduction}
-\include{tex/introduction/context}
-\include{tex/introduction/problem-justification}
-\include{tex/introduction/objectives-hypotheses}
-\include{tex/introduction/research-method}
+\include{tex/introduction/context-problem-justification}
+\include{tex/introduction/objectives-hypotheses-methods}
 \include{tex/introduction/structure}
 
 \chapter{Background}
-\include{tex/background/background}
 \include{tex/background/conceptual-spaces}
 \include{tex/background/hilbert-spaces}
 \include{tex/background/information-theory}
 \include{tex/background/idyot}
 
 \chapter{Theory \& Implementation}
-\include{tex/theory-implementation/theory}
 \include{tex/theory-implementation/abstraction}
 \include{tex/theory-implementation/segmentation}
 \include{tex/theory-implementation/categorization}
 \include{tex/theory-implementation/interpolation}
 
 \chapter{Empirical Analysis}
-\include{tex/empirical-analysis/methods}
 \include{tex/empirical-analysis/methodology}
 \include{tex/empirical-analysis/results}
 
@@ -40,14 +81,17 @@
 \include{tex/evaluation-discussion/discussion}
 
 \chapter{Conclusion}
-\include{tex/conclusion/conclusion}
 \include{tex/conclusion/contributions}
 \include{tex/conclusion/limitations}
 \include{tex/conclusion/future-work}
 
-\appendix
-\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\appendixname}\ \thechapter.\ #1}{}}
-\input{tex/appendix/appendix}
+%\begin{appendices}
+%  \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+%\end{appendices}
+
+%\appendix
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\appendixname}\ \thechapter.\ #1}{}}
+%\input{tex/appendix/appendix}
 
 \bibliographystyle{apacite}
 \bibliography{thesis}

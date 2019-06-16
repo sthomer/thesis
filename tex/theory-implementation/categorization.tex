@@ -1,20 +1,48 @@
 \section{Categorization}
+\label{section:categorization}
+
+Beyond the necessity for categorization due to the problem of content sparsity (see section \ref{section:content-sparsity}), categorization of representations is necessary to model the properties and concepts determined by regions of conceptual spaces (see section \ref{section:convexity-properties-concepts}).  Since we cannot \textit{a priori} know the bounds of the regions of concepts in a conceptual space, we instead build them up through categorization, discussed here.
 
 \subsection{Information Content Reduction Criterion} 
-Since the goal of an IDyOT is to be as information-efficient as possible in its representation of concepts, the primary way to do this is categorize two different symbols together if they lead to an overall reduction in information content of the space.
+\label{section:information-content-reduction-criterion}
 
-However, if this reduction by information content measure was the only method used to determine categories, there would be nothing to stop all symbols from being categorized together.  If all the symbols are the same the information content is maximally reduced, but the result is a meaningless stream of monotony.  Obviously, this is unrealistic and undesirable.
+Since the goal of an IDyOT is to be as information-efficient as possible in its representation of concepts, the primary way to do this is categorize two different symbols together if they lead to an overall reduction in information content of the space.  However, if this reduction by information content measure was the only method used to determine categories, there would be nothing to stop all symbols from being categorized together.  If all the symbols are the same, the information content is maximally reduced, but the result is a meaningless stream of monotony.  Obviously, this is unrealistic and undesirable.
 
 \subsection{Categorical Convexity Criterion}
-To push back against the reduction by information content is the categorical convexity criterion.  In section (?) we saw that categories in conceptual spaces are convex regions of the space, which translates to an infininite-dimensional hyperellipsoid in the corresponding Hilbert space.  What the convexity criterion guarantees is that for any two symbols in a given category, there is no symbol from a different category between those two symbols.
+\label{section:categorical-convexity-criterion}
 
-\subsection{Betweenness Relation}
-Though this criterion is simple in formulation, the definition of what "between" actually means can vary greatly depending on the space in question.  Even when the space is unidimensional, the definition of between is somewhat arbitrary.  For instance, take the space that is wrapped aorund a circle.  Any point is between any other two points, depending on which direction around the circle you move.  Things get even less clear when moving into higher dimensions, where oftentimes, only a partial ordering is possible.
+To push back against the reduction by information content is the categorical convexity criterion.  In section \ref{section:convexity-properties-concepts}, we saw that categories correspond to convex regions in a conceptual space.  In Hilbert spaces, categories would then translate to an infinite-dimensional hyperellipsoids.  In IDyOT, the convexity criterion guarantees that for any two symbols in a given category, there is no symbol from a different category between those two symbols.
 
-Therefore, instead of looking at betweenness at all, we instead incrementally build up categories by way of an inclusion radius around each point.  If another point falls within the inclusion radius, those poiints are categorized together.  In this way, we can ensure that ther eis never an interloper in a category, since if it was intruding on the region of the category, it would already be a member.
+Though this criterion is simple in formulation, the definition of what \textit{between} actually means can vary depending on the space in question.  Even when the space is unidimensional, the definition of \textit{between} is somewhat arbitrary.  For instance, take a space that is wrapped around a circle.  Any point is between any other two points, depending on which direction around the circle you move.  Things get even less clear when moving into higher dimensions, where oftentimes, even a partial natural ordering is impossible.
 
-\subsection{Other Categorization Schemes} 
-Chinese Restaurant Process is a nonparametric bayesian method that allows for unbounded clustering of new points in a space. Since for any given space, the number of "natural" categories is unknown, or perhaps unbounded, it makes sense to use a process that has the ability to add more categories as more data is seen in a given space, in the same way that humans are able to see more nuance the more trained they are in a given subject.
+Therefore, instead of looking at betweenness at all, we incrementally build up categories by way of an inclusion radius $\rho$ around each point \citep{wiggins2019learning}.  If another point falls within the inclusion radius of a category, that point is grouped into that category.  In this way, we can ensure that there is never an interloper in a category, since if it was intruding on the region of the category, it would already be a member.
 
-Locality-Sensitive Hashing allows for only a portion of the space to be searched for candidate categories.  Since points are only categorized together when they are close to eachother, there is no need to examine distant points as candidates.  Locality-sensitive hashing allows us to quickly determine what symbols are similar to a target symbol, and check if they should be categorized together.  This is the same as how humans are able to immediately sense similarity, though may require closer inspection to see if two subjects are actually of the same kind.
+\subsection{Adaptive Categories}
+\label{section:adaptive-categories}
 
+Since we utilize an inclusion radius to determine the categorization candidates for a new point, this would naively result in a partition of the space in which all categories are the same size, since they all use the same radius.  However, the categories of a given conceptual space are likely to be variable in size, and therefore we require a mechanism to adapt the size of a category according to the observations as they are added to the space.
+
+In order to ensure this adaptability, we maintain a mean $\mu$ and variance $\sigma^2$ of a multidimensional Gaussian prior distribution $\mathcal{N}(\mu,\sigma^2)$ for each category.  Whenever a new point $x$ is added to the category $c$, we perform a posterior update, which becomes the new prior of the category in future categorization.  In using a Gaussian prior, the centroid of the category corresponds to the prior mean, whereas the radius of the category corresponds to the $\|3\sigma\|$ (or 99.7\% of the volume of the Gaussian) which can be found from the prior variance $\sigma^2$.
+
+As more instances are added to a category, its mean will converge to a more somewhat stationary mean, and its variance will tend to decrease, corresponding to a reduction in the radius, though this will happen less if the constituent points of a category are spread out.  This makes the size of the category adaptive to its observed members and allows different categories to have different volumes.  By using the spherical Gaussian prior, the boundary-convexity of each category is ensured.
+
+Since points are being added to the space incrementally, the posterior update of the category is also performed incrementally \citep{murphy2007conjugate} by maintaining not only the prior mean and variance, but also sample mean and variance for each category.  Therefore, whenever a new point $x_t$ is added to a category, the moments of the distribution are updated as follows:
+
+\begin{align}
+\label{equation:gaussian-posterior-update}
+  m_t &= m_{t-1} + \frac{x_t - m_{t-1}}{n_t}
+    \tag*{(Sample Mean)} \\
+  s_t^2 &= s_{t-1}^2 + \frac{(x - m_t)(x - m_{t-1}) - s_{t-1}^2}{n_t}
+    \tag*{(Sample Variance)} \\
+    \mu_t &= \frac{\mu_{t-1} s_t^2 + x \sigma_{t-1}^2}{\sigma_{t-1}^2 + s_t^2}
+    \tag*{(Posterior Mean)} \\
+    \sigma_t^2 &= \frac{\sigma_{t-1}^2 s_t^2}{\sigma_{t-1}^2 + s_t^2}
+    \tag*{(Posterior Variance)}
+\end{align}
+
+\subsection{Maximum Information Content Reduction}
+\label{section:maximum-information-content-reduction}
+
+When a new point is added to the space, there may be multiple candidate categories for which the point falls within their inclusion radius.  When this happens, the heuristic of maximum information content reduction is employed.  Put simply, the new point is grouped with the category with the highest information content, as including the point in that category results in the largest reduction in information content out of the candidates.  Unfortunately, this results in a violation of the categorical convexity criterion due to the restriction in this implementation that each point must belong to exactly one category.
+
+Instead, the union of all candidate categories for the point could be combined to create a single category representing all the points of the constituent categories.  This has the benefit of both greatly reducing information content while still maintaining categorical convexity.  However, in practice, there is enough incidental overlap between what should be distinct categories that a large amount of points get categorized together which should not be, resulting in a small number of large, but meaningless groupings.  This union categorization scheme is a likely avenue of future research.
